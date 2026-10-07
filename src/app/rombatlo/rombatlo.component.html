@@ -1,1 +1,36 @@
-<p>rombatlo works!</p>
+
+
+<h1 class="text-center">Számítás</h1>
+
+<form [formGroup]="rombatloForm" (ngSubmit)="startCalcRombatlo()">
+    <div>
+        <label for="ediagonal" class="form-lable mt-3 text-center">e Átló
+            @if (rombatloForm.get('ediagonal')?.hasError('required') && rombatloForm.get('ediagonal')?.touched) {
+                <span class="badge text-bg-danger">Kötelező megadni az e Átlót!</span>
+            }
+            @if (rombatloForm.get('ediagonal')?.hasError('min') && rombatloForm.get('ediagonal')?.touched) {
+                <span class="badge text-bg-danger">Az e Átló minimum értéke 1 legyen!</span>
+            }
+        </label>
+        <input type="text" id="ediagonal" formControlName="ediagonal" class="form-control">
+    </div>
+    <div>
+        <label for="fdiagonal" class="form-lable mt-3 text-center">f Átló
+            @if (rombatloForm.get('fdiagonal')?.hasError('required') && rombatloForm.get('fdiagonal')?.touched) {
+                <span class="badge text-bg-danger">Kötelező megadni az f Átlót!</span>
+            }
+            @if (rombatloForm.get('fdiagonal')?.hasError('min') && rombatloForm.get('fdiagonal')?.touched) {
+                <span class="badge text-bg-danger">Az f Átló minimum értéke 1 legyen!</span>
+            }
+        </label>
+        <input type="text" id="fdiagonal" formControlName="fdiagonal" class="form-control">
+    </div>
+    <button class="btn btn-primary mt-3">Számít</button>
+
+    @if (showArea) {
+        <div>
+            <label for="area" class="form-lable mt-3">Terület</label>
+            <input type="text" id="area" formControlName="area" class="form-control" readonly>
+        </div>
+    }
+</form>
