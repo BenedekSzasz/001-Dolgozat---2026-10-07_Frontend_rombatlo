@@ -1,3 +1,13 @@
+/*
+* File:   about.component.spec.ts
+* Author: Szász Benedek
+* Copyright: 2026, Szász Benedek
+* Group: Szoft II N
+* Date: 2026-10-07
+* Github: https://github.com/BenedekSzasz
+* Licenc: GNU GPL
+*/
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AboutComponent } from './about.component';
