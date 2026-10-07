@@ -3,11 +3,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet, ReactiveFormsModule, RouterLink],
   selector: 'app-root',
-  styleUrl: './app.css',
+  imports: [ReactiveFormsModule, RouterLink, RouterOutlet],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('rombatlo');
+  protected readonly title = signal('gula');
 }
